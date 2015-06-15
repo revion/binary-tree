@@ -5,21 +5,33 @@ class Node
 {
   public:
     Node();
-    Node(Data newData);
+    Node(string newNama, string newUmur, string newAlamat);
+    
+    Node* getLeftNode() { return left; }
+    Node* getRightNode() { return right; }
+    string getNama() { return nama; }
+    string getUmur() { return umur; }
+    string getAlamat() { return alamat; }
+    
+    void setLeftNode( Node* newNode );
+    void setRightNode( Node* newNode );
+    //void setNama( string newNama );
+    void setUmur( string newUmur );
+    void setAlamat( string newAlamat );
+    void traversal();
   
+  private:
     Node* left;
     Node* right;
     Node* prev;
-    //Data* data;
-    
-    //void getLeftNode() { return Node::left; }
-    //void getRightNode() { return Node::right; }
-    //void traversal;
+    string nama;
+    string umur;
+    string alamat;
 };
 
-void Node::traversal()
+void Node::traversal( Node* root )
 {
-  if ( data::getnama() == NULL ) { return; }
+  if ( root == NULL ) { return; }
   traversal( getLeftNode() );
   //get the data of the node here and put it somewhere
   traversal( getRightNode() );
