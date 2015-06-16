@@ -21,7 +21,7 @@ class Node
     void setNama( string newNama );
     void setUmur( string newUmur );
     void setAlamat( string newAlamat );
-    void traversal();
+    void traversal( Node* root );
     void printNode();
 
     ~Node();
