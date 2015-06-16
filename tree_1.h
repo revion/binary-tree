@@ -8,10 +8,14 @@ using namespace std;
 class Tree::Node{
 public:
   Tree();
+  Tree(string filename);
+  ~Tree();
+  
+  Node* root;
+  
   void insert(string newNama,string newUmur,string newAlamat);
   void search(string data,string type,Node *currentNode);
   void delete(string data,string type);
-  ~Tree();
 };
 
 #endif
