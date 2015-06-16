@@ -1,8 +1,8 @@
 #include<iostream>
 #include<string>
 using namespace std;
-#ifndef _NODE_1_H_
-#define _NODE_1_H_
+#ifndef _Node_H
+#define _Node_H
 
 class Node
 {
