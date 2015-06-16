@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+#ifndef _BINARYTREE-1_H_
+#define _BINARYTREE-1_H_
+#include "binarytree-1.h"
+
+class Node
+{
+  public:
+    Node();
+    Node(std::string newNama, std::string newUmur, std::string newAlamat);
+    
+    Node* getLeftNode() { return left; }
+    Node* getRightNode() { return right; }
+    string getNama() { return nama; }
+    string getUmur() { return umur; }
+    string getAlamat() { return alamat; }
+    
+    void setLeftNode( Node* newNode );
+    void setRightNode( Node* newNode );
+    //void setNama( string newNama );
+    void setUmur( string newUmur );
+    void setAlamat( string newAlamat );
+    void traversal();
+    void printNode();
+  
+  private:
+    Node* left;
+    Node* right;
+    Node* prev;
+    string nama;
+    string umur;
+    string alamat;
+};
+#endif

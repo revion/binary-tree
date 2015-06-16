@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+#ifndef _NODE-1_H_
+#define _NODE-1_H_
+#include "node-1.h"
+
+class Node
+{
+  public:
+    Node();
+    Node(std::string newNama, std::string newUmur, std::string newAlamat);
+    
+    Node* getLeftNode() { return left; }
+    Node* getRightNode() { return right; }
+    std::string getNama() { return nama; }
+    std::string getUmur() { return umur; }
+    std::string getAlamat() { return alamat; }
+    
+    void setLeftNode( Node* newNode );
+    void setRightNode( Node* newNode );
+    void setNama( std::string newNama );
+    void setUmur( std::string newUmur );
+    void setAlamat( std::string newAlamat );
+    void traversal();
+    void inputNode(std::string newNama,std::string newUmur,std::string newAlamat);
+    void printNode();
+  
+  private:
+    Node* left;
+    Node* right;
+    Node* prev;
+    std::string nama;
+    std::string umur;
+    std::string alamat;
+};
+#endif

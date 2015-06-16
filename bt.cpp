@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+template<class T>class binarytree{
+  struct node{
+    string key;
+    int age;
+    string address;
+  };
+  node *left,*right,*root;
+  size_t count;
+public:
+  binarytree();
+  void node::binarytree(string name,int ages,string addr);
+  void setnode(node* l,node* r);
+  void getnode();
+  ~binarytree();
+};
+
+void binarytree::node::binarytree(string name,int ages,string addr){
+  key=name;
+  age=ages;
+  address=addr;
+}
+
+void binarytree::setnode(node* l,node* r){
+  left=l;
+  right=r;
+}
+
+void binarytree::getnode(){
+  return left,right;
+}

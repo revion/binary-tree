@@ -1,0 +1,7 @@
+#include "node_1.h"
+
+main(){
+  Node data1;
+  data1.inputNode();
+  data1.printNode();
+}
