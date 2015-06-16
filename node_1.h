@@ -11,11 +11,11 @@ class Node
     Node();
     Node(string newNama, string newUmur, string newAlamat);
     
-    Node* getLeftNode() { return left; }
-    Node* getRightNode() { return right; }
-    string getNama() { return nama; }
-    string getUmur() { return umur; }
-    string getAlamat() { return alamat; }
+    Node* getLeftNode();
+    Node* getRightNode();
+    string getNama();
+    string getUmur();
+    string getAlamat();
     
     void setLeftNode( Node* newNode );
     void setRightNode( Node* newNode );
