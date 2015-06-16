@@ -3,7 +3,6 @@
 using namespace std;
 #ifndef _NODE_1_H_
 #define _NODE_1_H_
-#include "node_1.h"
 
 class Node
 {
