@@ -1,4 +1,32 @@
+#include<iostream>
+#include<fstream>
+#include<string>
 #include "tree_1.h"
+
+Tree::Tree()
+{
+  root = NULL;
+}
+
+Tree::Tree(string filename)
+{
+  string name, age, address;
+  fstream db_file;
+  db_file.open(filename.c_str(), ios::in);
+  if (db_file.is_open())
+  {
+    while (!db_file.eof())
+    {
+      getline(db_file,name,"\t");
+      if (name == "") { break; }
+      getline(db_file,age,"\t");
+      getline(db_file,address,"\n");
+      insert(name,age,address);
+    }
+  }
+  else cout << "Unable to open file.";
+  db_file.close();
+}
 
 void Tree::insert(string newNama,string newUmur,string newAlamat){
   Node* currentNode=root;
