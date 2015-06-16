@@ -1,3 +1,5 @@
+#include<iostream>
+#include<string>
 #include "node_1.h"
 
 Node::Node()
