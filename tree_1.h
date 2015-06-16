@@ -2,8 +2,8 @@
 #include<string>
 #include"node_1.h"
 using namespace std;
-#ifndef _TREE_H_
-#define _TREE_H_
+#ifndef _Tree_H
+#define _Tree_H
 
 class Tree::Node{
 public:
